@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Redireccionamiento</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener la fecha de hoy
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Los meses comienzan en 0
+            const day = String(today.getDate()).padStart(2, '0');
+
+            // Construir la fecha en el formato deseado
+            const formattedDate = `${year}-${month}-${day}`;
+
+            // Construir la URL con la fecha actualizada
+            const url = `https://docs.google.com/forms/d/e/1FAIpQLSet5kJnNSzQ9a4Ig7w9JZJzd7NxqonM7gTWJTlSZ6K21HMrNg/viewform?usp=pp_url&entry.2112608789=-&entry.1614654584=${formattedDate}`;
+
+            // Redirigir a la URL
+            window.location.href = url;
+        });
+    </script>
 </head>
 <body>
-    <button>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSet5kJnNSzQ9a4Ig7w9JZJzd7NxqonM7gTWJTlSZ6K21HMrNg/viewform?usp=pp_url&entry.2112608789=-&entry.1614654584=2024-06-22">ok ingreso</a>
-    </button>
+    <h1>Redireccionando...</h1>
 </body>
 </html>
