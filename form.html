@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            height: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            font-size: 29px;
+        }
+    </style>
+    <title>BALANCE</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtener la fecha de hoy
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0'); // Los meses comienzan en 0
+            const day = String(today.getDate()).padStart(2, '0');
+
+            // Construir la fecha en el formato deseado
+            const formattedDate = `${year}-${month}-${day}`;
+
+            // Construir la URL con la fecha actualizada
+            const url = `https://docs.google.com/forms/d/e/1FAIpQLSet5kJnNSzQ9a4Ig7w9JZJzd7NxqonM7gTWJTlSZ6K21HMrNg/viewform?usp=pp_url&entry.2112608789=-&entry.1614654584=${formattedDate}`;
+
+            // Redirigir a la URL
+          //  window.location.href = url;
+        });
+    </script>
+</head>
+
+<body>
+    <h1>BALANCE</h1>
+        <label for="numerico">Ingrese un número:</label>
+    <input id="numerico" name="numerico" inputmode="numeric" pattern="[0-9]*">
+</body>
+
+</html>
