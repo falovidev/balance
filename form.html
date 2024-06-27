@@ -1,32 +1,18 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            height: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-            font-size: 29px;
-        }
-    </style>
-    <title>BALANCE</title>
-        <script>
-        // Enfocar el campo de entrada cuando la página se carga
+    <title>Input Numérico con Autoenfoque</title>
+</head>
+<body>
+    <label for="numerico">Ingrese un número:</label>
+    <input id="numerico" name="numerico" inputmode="numeric" pattern="[0-9]*">
+    <script>
+        // Enfocar el campo de entrada después de un retardo de 3 segundos
         window.onload = function() {
-            document.getElementById('numerico').focus();
+            setTimeout(function() {
+                document.getElementById('numerico').focus();
+            }, 3000); // 3000 milisegundos = 3 segundos
         };
     </script>
-</head>
-
-<body>
-    <h1>BALANCE</h1>
-        <label for="numerico">Ingrese un número:</label>
-    <input id="numerico" name="numerico" inputmode="numeric" pattern="[0-9]*">
 </body>
-
 </html>
