@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Input Numérico con Autoenfoque</title>
+    <title>Input Numérico con Enfoque Táctil</title>
 </head>
 <body>
     <label for="numerico">Ingrese un número:</label>
-    <input id="numerico" name="numerico" inputmode="numeric" pattern="[0-9]*" autofocus>
+    <input id="numerico" name="numerico" inputmode="numeric" pattern="[0-9]*">
     <script>
-        // Hacer clic en el campo de entrada después de un retardo de 3 segundos
+        // Función para enfocar el campo de entrada con un evento táctil
+        function enfocarConTactil() {
+            var numericoInput = document.getElementById('numerico');
+            numericoInput.focus(); // Enfocar el campo
+
+            // Simular un evento táctil
+            var eventoTactil = new Event('touchstart');
+            numericoInput.dispatchEvent(eventoTactil);
+        }
+
+        // Enfocar el campo de entrada después de un retardo de 3 segundos
         window.onload = function() {
-            setTimeout(function() {
-                document.getElementById('numerico').click();
-            }, 3000); // 3000 milisegundos = 3 segundos
+            setTimeout(enfocarConTactil, 3000); // 3000 milisegundos = 3 segundos
         };
     </script>
 </body>
